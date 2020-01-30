@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration</title>
+    <style>
+        body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: whitesmoke;
+}
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: transparent;
+  text-align: center;
+}
+.heading{
+  color: #2ecc71;
+}
+.head{
+  color: beige;
+}
+.box h1{
+  color: black;
+  
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.35s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+    </style>
+</head>
+
+<body>
+    <form action="/create-user" method="POST" class="box">
+        <h1 id="heading">Signup</h1>
+            <input type="text" name="username" />
+            <input type="password" name="password" />
+            <input type="submit" id="submit_btn" value="Register" />
+            <p id="head">
+                Already a member? <a href="/login">Sign in</a>
+            </p>
+    </form>
+    {{!-- <script>
+
+        //submit username/password  to login
+        var submit = document.getElementById('submit_btn');
+        submit.onclick = function () {
+            //Create a req to counter endpoint
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if (request.readyState == XMLHttpRequest.DONE) {
+                    if (request.status == 200) {
+                        console.log('user logged in')
+                        alert('create successfully')
+                    } else if (request.status === 404) {
+                        alert('Password not valid')
+                    } else if (request.status === 500) {
+                        alert('something went wrong on the server')
+                    }
+                }
+
+            }
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            //var name = nameInput.value;
+
+            //make the request
+            request.open('POST', 'http://localhost:3000/create-user', true);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.send(JSON.stringify({ username: username, password: password }));
+            //make a request to server and send name
+            //capture list and render as list
+
+
+        }
+    </script> --}}
+</body>
+
+</html>

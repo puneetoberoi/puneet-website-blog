@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        *{
+  font-family: "montserrat",sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.page{
+  background: #f1f1f1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col{
+  flex: 1;
+  height: 100vh;
+  position: relative;
+}
+.countdown-col{
+  background: url(http://hdwpro.com/wp-content/uploads/2019/01/Wonderful-Awesome-Wallpaper.jpg) no-repeat center;
+  background-size: cover;
+}
+.time{
+  color: red;
+  text-transform: uppercase;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.time span{
+  padding: 0 14px;
+  font-size: 10px;
+}
+.time span div{
+  font-size: 40px;
+}
+
+.newsletter{
+  width: 90%;
+}
+.newsletter h4{
+  font-style: italic;
+  font-size: 12px;
+}
+.newsletter input{
+  display: block;
+  margin: 12px auto;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.newsletter-btn{
+  background: linear-gradient(125deg,#3498db,#34495e);
+  color: red;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.newsletter-btn:hover{
+  opacity: .3;
+}
+
+@media screen and (max-width :900px){
+  .col{
+    flex: 100%;
+  }
+}
+    </style>
+</head>
+
+<body>
+   <div class="page">
+       <div class="countdown-col col">
+            <div class="time middle">
+                <span>
+                    <div id="d">12</div>
+                    Days
+                </span>
+                <span>
+                    <div id="h">05 </div>
+                    Hours
+                </span>
+                <span>
+                    <div id="m">50</div>
+                    Minutes
+                </span>
+                <span>
+                    <div id="s">62</div>
+                    Seconds
+                </span>
+            </div>
+       </div>
+           <div class="newsletter-col col">
+               <div class="newsletter middle">
+                   <h2>Will be coming soon! Stay Tuned</h2>
+               </div>
+               
+           </div>
+       
+   </div>
+   <script>
+       var comingdate = new Date("March 1, 2020 00:00:00");
+
+var d = document.getElementById('d');
+var h = document.getElementById('h');
+var m = document.getElementById('m');
+var s = document.getElementById('s');
+
+var x = setInterval(function(){
+  var now = new Date();
+  var des = comingdate.getTime() - now.getTime();
+  var days = Math.floor(des/(1000 * 60 * 60 * 24));
+  var hours = Math.floor(des%(1000 * 60 * 60 * 24) / (1000 * 60 *60));
+  var mins = Math.floor(des%(1000 * 60 * 60) / (1000 * 60));
+  var secs = Math.floor(des%(1000 * 60) / 1000);
+
+  d.innerHTML = getTrueNumber(days);
+  h.innerHTML = getTrueNumber(hours);
+  m.innerHTML = getTrueNumber(mins);
+  s.innerHTML = getTrueNumber(secs);
+
+  if(des <= 0) clearInterval(x);
+
+},1000);
+
+function getTrueNumber(x) {
+  if (x<10) return '0'+x;
+  else return x;
+}
+
+   </script>
+    
+</body>
+
+</html>

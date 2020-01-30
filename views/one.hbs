@@ -1,0 +1,104 @@
+{{!-- <html>
+
+<head>
+    <title>
+        Article one | Jaspreet Singh
+    </title>
+    <style>
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+            color:#db8787;
+            font-family: sans inherit;
+            padding-top: 60;
+            padding-left: 20;
+            padding-right: 20;
+        }
+        #name {
+            margin: 0 auto;
+            max-width: 800px;
+            color:#db8787;
+            font-family: sans inherit;
+            padding-top: 40;
+            padding-left: 300;
+            padding-right: 20;
+            margin-left: 800px;
+            margin-top: 550px;
+        }
+        #submit_btn {
+            padding-right: 10;
+            margin-left: 1250px;
+            margin-top: 5px;
+        }
+    </style>   
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <hr />
+        <h3>
+            {{ data.title }}
+        </h3>
+        <div>
+            {{ data.heading}}
+        </div>
+        <div>
+            <p>
+                {{ data.content }}
+            </p>
+        </div>
+    </div>
+    <div>
+        <!-- This button <button id="counter">Click me</button> has been clicked <span id="count">0</span> -->
+                <br/>
+                <input type="text" id="name" placeholder="add a comment"></input>
+                <br/>
+                <input type="submit" value="Comment" id="submit_btn"></input>
+                <ul id="namelist">
+                </ul>
+    </div>
+    <script>
+            //submit name
+            
+            var submit = document.getElementById('submit_btn');
+            submit.onclick = function(){
+                //Create a req to counter endpoint
+                var request = new XMLHttpRequest();
+                request.onreadystatechange = function(){
+                    if(request.readyState == XMLHttpRequest.DONE){
+                        if(request.status==200){
+                            var names = request.responseText;
+                            names=JSON.parse(names);
+                            //convert to html string 
+                            var list = '';
+                            for(var i=0; i<names.length; i++){
+                                list+= '<li>' + names[i] + '</li>';
+                            }
+                            var ul = document.getElementById('namelist')
+                            ul.innerHTML = list;
+                        }
+                    }
+
+                }
+                var nameInput = document.getElementById('name');
+                 var name = nameInput.value;
+
+                //make the request
+                request.open('GET', 'http://localhost:3000/submit-name?name=' + name, true);
+                request.send(null);
+                //make a request to server and send name
+                //capture list and render as list
+                
+
+            }
+    </script>
+
+
+
+</body>
+
+</html> --}}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .bod {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+         #logout {
+            position: absolute;
+            margin-top: 45px;
+            margin-left: 1550px;
+            transform: translate(-100%, -100%);
+            text-decoration: underline;
+            color: teal;
+        }
+
+        #create {
+            margin-top: 0px;
+            margin-left: 1650px;
+            transform: translate(-100%, -100%);
+            text-decoration: underline;
+            color: white
+        }
+
+        #list {
+            margin-top: 0px;
+            margin-left: 1720px;
+            transform: translate(-100%, -100%);
+            text-decoration: underline;
+            color: white
+        }
+
+        #articles {
+            margin-top: 10px;
+            margin-left: 0px;
+            color: teal;
+        }
+
+        #new {
+            margin-top: 10px;
+            margin-left: 10px;
+            color: teal;
+        }
+
+        #pic2 {
+            height: 100%;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat", sans-serif;
+        }
+
+        .btn {
+            width: 300px;
+            height: 70px;
+            background: none;
+            border: 4px solid;
+            color: #3498db;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            transform: translate(50%, 400%);
+        }
+
+        .btn::before,
+        .btn::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 4px;
+            background: #353b48;
+            transform: skewX(50deg);
+            transition: .4s linear;
+        }
+
+        .btn::before {
+            top: -4px;
+            left: 10%;
+        }
+
+        .btn::after {
+            bottom: -4px;
+            right: 10%;
+        }
+
+        .btn:hover::before {
+            left: 80%;
+        }
+
+        .btn:hover::after {
+            right: 80%;
+        }
+    </style>
+    <title>Registration</title>
+</head>
+
+<body class="bod">
+    <div style="background-image: url('https://www.thecoderpedia.com/wp-content/uploads/2019/09/programming-3652497_1920.jpg');"
+        id="pic2">
+        <form action="/create-article">
+            <button type="submit" id="articles">New Article</button>
+            <d/div action="/create-article">
+                <button type="submit" id="new">Articles</button>
+
+
+                <a href="/Logout" id="logout">Logout</a>
+
+                <div id="first">
+                    <section>
+                        {{# each data }}
+                        <div>
+                            <a href="{{ this.heading}}">{{ this.heading }}</a>
+                        </div>
+                        <div>{{ this.title }}</div>
+                        <br>
+                        <br>
+                        <br>
+                        {{/each}}
+                    </section>
+                    </div> <button class="btn">Resume</button>
+</body>
+
+</html>
