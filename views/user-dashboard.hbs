@@ -2,58 +2,37 @@
 <html>
 
 <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         html,
         body {
-            height: 100%;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+            padding: 0;
         }
 
-        .bod {
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-
-         #logout {
+        #logout {
+            margin-top: 10px;
+            margin-left: 1600px;
+            text-decoration: underline;
+            color: teal;
             position: absolute;
-            margin-top: 45px;
-            margin-left: 1550px;
-            transform: translate(-100%, -100%);
-            text-decoration: underline;
-            color: teal;
-        }
-
-        #create {
-            margin-top: 0px;
-            margin-left: 1650px;
-            transform: translate(-100%, -100%);
-            text-decoration: underline;
-            color: white
-        }
-
-        #list {
-            margin-top: 0px;
-            margin-left: 1720px;
-            transform: translate(-100%, -100%);
-            text-decoration: underline;
-            color: white
-        }
-
-        #articles {
-            margin-top: 10px;
-            margin-left: 0px;
-            color: teal;
-        }
-
-        #new {
-            margin-top: 10px;
-            margin-left: 10px;
-            color: teal;
+            padding: 20px;
+            display: block;
+            font-size: 20px;
         }
 
         #pic2 {
             height: 100%;
+            opacity: 0.5;
 
+        }
+
+            {
+                {
+                 !-- This is the first button --
+            }
         }
 
         * {
@@ -72,8 +51,8 @@
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
-            position: relative;
-            transform: translate(50%, 400%);
+            position: absolute;
+            transform: translate(23%, -1000%);
         }
 
         .btn::before,
@@ -104,22 +83,298 @@
         .btn:hover::after {
             right: 80%;
         }
+
+            {
+                {
+                 !-- This is the second button --
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat", sans-serif;
+        }
+
+        .btn2 {
+            width: 300px;
+            height: 70px;
+            background: none;
+            border: 4px solid;
+            color: #3498db;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            transform: translate(135%, -680%);
+        }
+
+        .btn2::before,
+        .btn2::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 4px;
+            background: #353b48;
+            transform: skewX(50deg);
+            transition: .4s linear;
+        }
+
+        .btn2::before {
+            top: -4px;
+            left: 10%;
+        }
+
+        .btn2::after {
+            bottom: -4px;
+            right: 10%;
+        }
+
+        .btn2:hover::before {
+            left: 80%;
+        }
+
+        .btn2:hover::after {
+            right: 80%;
+        }
+
+
+
+            {
+                {
+                 !-- This is the fourth button --
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat", sans-serif;
+        }
+
+        .btn4 {
+            width: 300px;
+            height: 70px;
+            background: none;
+            border: 4px solid;
+            color: #3498db;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            transform: translate(380%, -680%);
+        }
+
+        .btn4::before,
+        .btn4::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 4px;
+            background: #353b48;
+            transform: skewX(50deg);
+            transition: .4s linear;
+        }
+
+        .btn4::before {
+            top: -4px;
+            left: 10%;
+        }
+
+        .btn4::after {
+            bottom: -4px;
+            right: 10%;
+        }
+
+        .btn4:hover::before {
+            left: 80%;
+        }
+
+        .btn4:hover::after {
+            right: 80%;
+        }
+
+            {
+                {
+                 !-- This is the fifth button --
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat", sans-serif;
+        }
+
+        .btn5 {
+            width: 300px;
+            height: 70px;
+            background: none;
+            border: 4px solid;
+            color: #3498db;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            transform: translate(260%, -400%);
+        }
+
+        .btn5::before,
+        .btn5::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 4px;
+            background: #353b48;
+            transform: skewX(50deg);
+            transition: .4s linear;
+        }
+
+        .btn5::before {
+            top: -4px;
+            left: 10%;
+        }
+
+        .btn5::after {
+            bottom: -4px;
+            right: 10%;
+        }
+
+        .btn5:hover::before {
+            left: 80%;
+        }
+
+        .btn5:hover::after {
+            right: 80%;
+        }
+
+        This is the sixth button * {
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat", sans-serif;
+        }
+
+        .btn6 {
+            width: 300px;
+            height: 70px;
+            background: none;
+            border: 4px solid;
+            color: #3498db;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            transform: translate(500%, -1050%);
+        }
+
+        .btn6::before,
+        .btn6::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 4px;
+            background: #353b48;
+            transform: skewX(50deg);
+            transition: .4s linear;
+        }
+
+        .btn6::before {
+            top: -4px;
+            left: 10%;
+        }
+
+        .btn6::after {
+            bottom: -4px;
+            right: 10%;
+        }
+
+        .btn6:hover::before {
+            left: 80%;
+        }
+
+        .btn6:hover::after {
+            right: 80%;
+        }
+
+        .pseudoBackground {}
+
+        .animated-text {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2980b9;
+            padding: 0 40px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .line {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 40px;
+            line-height: 60px;
+        }
+
+        .line:first-child {
+            animation: anim 12s infinite;
+        }
+
+        @keyframes anim {
+            0% {
+                margin-top: 0;
+            }
+
+            16% {
+                margin-top: -60px;
+            }
+
+            33% {
+                margin-top: -120px;
+            }
+
+            50% {
+                margin-top: -180px;
+            }
+
+            66% {
+                margin-top: -120px;
+            }
+
+            82% {
+                margin-top: -60px;
+            }
+
+            100% {
+                margin-top: 0;
+            }
+        }
     </style>
+        
     <title>Registration</title>
 </head>
 
 <body class="bod">
     <div style="background-image: url('https://www.thecoderpedia.com/wp-content/uploads/2019/09/programming-3652497_1920.jpg');"
         id="pic2">
-        <form action="/create-article">
+        <div class="animated-text">
+            <div class="line">Click Any</div>
+            <div class="line">Button </div>
+            <div class="line">To Naviagte</div>
+            <div class="line">Thanks Jas</div>
+
+        </div>
+        {{!-- <form action="/create-article">
             <button type="submit" id="articles">New Article</button>
             <d/div action="/create-article">
-                <button type="submit" id="new">Articles</button>
+                <button type="submit" id="new">Articles</button> --}
 
-
-                <a href="/Logout" id="logout">Logout</a>
-
-                <div id="first">
+        {{!-- <div id="first">
                     <section>
                         {{# each data }}
                         <div>
@@ -130,8 +385,24 @@
                         <br>
                         <br>
                         {{/each}}
-                    </section>
-                    </div> <button class="btn">Resume</button>
+                    </section> --}}
+        <form action="/resume">
+    </div> 
+    </form>
+    <form action="/search-engine">
+    </div> <button class="btn2">Search-Engine</button>
+    </form>
+    </div> 
+    <form action="/upcoming">
+    </div> <button class="btn4">Upcoming Projects</button>
+    </form>
+    <form action="/about">
+        </div> <button class="btn5">About me</button>
+    </form>
+    <form action="/create-article">
+        </div> <button class="btn6">Add Project</button>
+
+
 </body>
 
 </html>

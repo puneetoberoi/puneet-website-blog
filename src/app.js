@@ -3,8 +3,8 @@ var PORT = process.env.PORT || 3000;
 const morgan = require('morgan')
 const path = require('path')
 const mysql = require('mysql');
-const hbs = require('hbs')
 const multer = require('multer')
+const hbs = require('hbs')
 const {sendWelcomeEmail} = require('./emails/accounts')
 var bodyParser = require('body-parser')
 const publicDirectory = path.join(__dirname, '../public')
@@ -27,6 +27,22 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }))
+
+const upload = multer({
+    dest: 'documents', 
+    limits: {
+        fileSize: 3000000
+    },
+    fileFilter(req, file, callback){
+        if(!file.originalname.endsWith('/\.(doc|docx|pdf)$/')){
+            return callback(new Error('Please upload pdf or doc file'))
+        }
+
+        //callback(new Error('File must be a doc or pdf'))
+        callback(undefined, true)
+        //callback(undefined, false)
+    }
+})
 
 var connection = mysql.createConnection({  //connection variable set which uses the module settings set for the db credentials.
     'host': 'localhost',
@@ -52,27 +68,36 @@ app.get('/search-engine', function(req, res){
     res.render('search-engine')
 })
 
-app.get('/resume', function(req, res){
-    try {
+app.post('/resume', upload.single('resume'), (req, res)=>{
+    res.sendFile(path.join(__dirname, 'public', 'doc.html'))
+}, (error, req, res, next) =>{
+    res.status(400).send({error: error.message})
+})
 
-        var sql = "SELECT * FROM article WHERE heading = 'one'";
+// app.get('/resume', function(req, res){
+//     try {
 
-        connection.query(sql, true,  function(error, results, fields) {
-            console.log(typeof(results[0].content))
-            if(error){
-                res.status(500).send(err.toString())
-            } else{
-                this.originalRes.render('resume', {data:results});
-            }
+//         var sql = "SELECT * FROM article WHERE heading = 'one'";
+
+//         connection.query(sql, true,  function(error, results, fields) {
+//             console.log(typeof(results[0].content))
+//             if(error){
+//                 res.status(500).send(err.toString())
+//             } else{
+//                 this.originalRes.render('resume', {data:results});
+//             }
             
             
-        }.bind({ originalReq: req, originalRes: res }));
+//         }.bind({ originalReq: req, originalRes: res }));
 
        
 
-    } catch (ex) {
-        res.send('Internal error');
-    }
+//     } catch (ex) {
+//         res.send('Internal error');
+//     }
+// })
+app.get('/resume', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'doc.html'))
 })
 
 app.post('/create-article', function(req, res){
@@ -213,6 +238,14 @@ app.post('/login', function (req, res) {
     } catch (ex) {
         res.send('Internal error');
     }
+ })
+
+ app.get('/guest-dashboard', (req, res)=>{
+     res.render('user-dashboard')
+ })
+
+ app.get('/guest', (req, res)=> {
+     res.redirect('/guest-dashboard')
  })
 
 

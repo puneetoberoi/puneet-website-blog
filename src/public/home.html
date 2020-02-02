@@ -1,97 +1,155 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>
         Puneet's Website
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
+
         #pic {
-            margin: 0 auto;
-            max-width: 200px;
-            color: blue;
-            font-family: sans inherit;
-            padding-top: 10;
-            padding-left: 300;
-            padding-right: 20;
+            left: 275px;
+            top: 20px;
+            padding-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 18%;
+        }
+
+        #text {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 0px;
         }
 
 
-        .container {
-            margin: 0 auto;
-            max-width: 800px;
-            color: blue;
-            font-family: sans inherit;
-            padding-top: 60;
-            padding-left: 20;
-            padding-right: 20;
+        .form1 {
+            position: relative;
+            transform: translate(0%, 135%);
+
         }
 
-        .create {
-            margin-top: 0px;
-            position: absolute;
-            margin-left: 758px;
-            transform: translate(-100%, -100%);
-            text-decoration: underline;
-            color: initial;
+        .box {
+            width: 300px;
+            padding: 40px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -155%);
+            background: transparent;
+            text-align: center;
         }
 
-        .login {
-
-            margin-top: 0px;
-            position: absolute;
-            margin-left: 800px;
-            transform: translate(-100%, -100%);
-            text-decoration: underline;
-            color: initial;
+        .box h1 {
+            color: black;
+            text-transform: uppercase;
+            font-weight: 500;
         }
 
-        .guest {
+        .box input[type="text"],
+        .box input[type="password"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: black;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
 
-            margin-top: 0px;
-            position: absolute;
-            margin-left: 0px;
-            transform: translate(-100%, -100%);
-            text-decoration: underline;
-            color: initial;
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus {
+            width: 280px;
+            border-color: #2ecc71;
+        }
+
+        .box input[type="submit"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: black;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+
+        .box input[type="submit"]:hover {
+            background: #2ecc71;
         }
     </style>
+
 </head>
 
-<body class="container">
-    <div class="contain">
-        <div class="create">
-            <a href="/create-user" class="button">Register/</a>
-        </div>
-        <div class="login">
-            <a href="/login" class="button">Signin</a>
-        </div>
-        <div class="guest">
-            <a href="/guest" class="button">Guest</a>
-        </div>
-        <div class="pic"></div>
-        <img id="pic"
-            src="https://media.licdn.com/dms/image/C4D03AQFW-ajyvTenPQ/profile-displayphoto-shrink_200_200/0?e=1583971200&v=beta&t=KsqgY65dXnHlYKjmo9kcYNxJwgUbtv1abmyVhy-00s0">
-        <hr />
-        <h3>Personal</h3>
-        <div>
+<body>
+    <div class="container">
+        <a
+            href="javascript:alert('Thank you for visiting my site. Please checkout the guest section to go to the user dashboard');"><img
+                id="pic"
+                src="https://media.licdn.com/dms/image/C4D03AQFW-ajyvTenPQ/profile-displayphoto-shrink_200_200/0?e=1583971200&v=beta&t=KsqgY65dXnHlYKjmo9kcYNxJwgUbtv1abmyVhy-00s0">
+        </a>
+
+
+        <div id="text">
+            <h3>Personal</h3>
             <p>Hi. My name is Jaspreet Singh</p>
-        </div>
-        <hr />
-        <h3>Professional</h3>
-        <div>
+
+            <h3>Professional</h3>
             <p>I am working at Ticketmaster.</p>
+            <p>Check my resume by following link below:</p>
+
+            <a href="https://drive.google.com/open?id=1PZTpzNE009qGB9oSUyduj8_xwjdKReff" id="resume">My Resume</a>
+            <br>
+            <br>
+            <p>If you have an account you can login below</p>
+
+            </h4>
         </div>
-        <hr />
-        <h4>Login to Unlock Projects, Resume and Articles! You can also register to add your data.</h4>
-        <!-- <div>
+
+    <div class="form1">
+        <form action="/login" method="POST" class="box">
+
+            <input type="text" name="username" placeholder="username" />
+            <input type="password" name="password" placeholder="password" />
+
+            <input type="submit" id="submit_btn" value="Login" />
+            <a href="/create-user" class="button">Register/</a>
+            <a href="/guest" class="button">Guest Login</a>
+
+
+
+        </form>
+    </div>
+    </div>
+    <p>
+
+    </p>
+
+    <!-- <div>
             <input type="text" id="username" placeholder="username" />
             <input type="password" id="password" />
             <input type="submit" id="submit_btn"/>
 
         </div> -->
-        <!-- <script>
-
+    <!-- <script>
+             Go back <a href="/">Home</a> This is for bottom link
             //submit username/password  to login
             var submit = document.getElementById('submit_btn');
             submit.onclick = function () {
