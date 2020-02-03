@@ -2,11 +2,12 @@
   "name": "puneet-website-api",
   "version": "1.0.0",
   "description": "",
+  "main": "app.js",
   "scripts": {
     "start": "node src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "", 
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^6.5.1",
