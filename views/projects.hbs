@@ -3,56 +3,99 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         html,
         body {
             height: 100vh;
-            background-color: grey;
+            background-color: black;
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
-
         #logout {
             margin-top: 10px;
             margin-left: 1600px;
             text-decoration: underline;
             color: teal;
-            position: relative;
+            position: absolute;
             padding: 20px;
             display: block;
             font-size: 20px;
         }
-
-
+        #pic2 {
+            height: 100%;
+            opacity: 0.5;
+        }
             {
                 {
-                 !-- This is the second button --
+                 !-- This is the first button --
             }
         }
-
         * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
-
-        .btn2 {
+        .btn {
             width: 300px;
             height: 70px;
             background: none;
             border: 4px solid;
-            color: blue;
+            color: #3498db;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
             position: absolute;
-            transform: translate(50%, 50%);
+            transform: translate(23%, -1000%);
         }
-
+        .btn::before,
+        .btn::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 4px;
+            background: #353b48;
+            transform: skewX(50deg);
+            transition: .4s linear;
+        }
+        .btn::before {
+            top: -4px;
+            left: 10%;
+        }
+        .btn::after {
+            bottom: -4px;
+            right: 10%;
+        }
+        .btn:hover::before {
+            left: 80%;
+        }
+        .btn:hover::after {
+            right: 80%;
+        }
+            {
+                {
+                 !-- This is the second button --
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat", sans-serif;
+        }
+        .btn2 {
+            width: 300px;
+            height: 70px;
+            background: none;
+            border: 4px solid;
+            color: #3498db;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            transform: translate(135%, -680%);
+        }
         .btn2::before,
         .btn2::after {
             content: "";
@@ -63,37 +106,30 @@
             transform: skewX(50deg);
             transition: .4s linear;
         }
-
         .btn2::before {
             top: -4px;
             left: 10%;
         }
-
         .btn2::after {
             bottom: -4px;
             right: 10%;
         }
-
         .btn2:hover::before {
             left: 80%;
         }
-
         .btn2:hover::after {
             right: 80%;
         }
-
             {
                 {
                  !-- This is the fourth button --
             }
         }
-
         * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
-
         .btn4 {
             width: 300px;
             height: 70px;
@@ -107,7 +143,6 @@
             position: relative;
             transform: translate(380%, -680%);
         }
-
         .btn4::before,
         .btn4::after {
             content: "";
@@ -118,37 +153,30 @@
             transform: skewX(50deg);
             transition: .4s linear;
         }
-
         .btn4::before {
             top: -4px;
             left: 10%;
         }
-
         .btn4::after {
             bottom: -4px;
             right: 10%;
         }
-
         .btn4:hover::before {
             left: 80%;
         }
-
         .btn4:hover::after {
             right: 80%;
         }
-
             {
                 {
                  !-- This is the fifth button --
             }
         }
-
         * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
-
         .btn5 {
             width: 300px;
             height: 70px;
@@ -162,7 +190,6 @@
             position: absolute;
             transform: translate(260%, -400%);
         }
-
         .btn5::before,
         .btn5::after {
             content: "";
@@ -173,31 +200,25 @@
             transform: skewX(50deg);
             transition: .4s linear;
         }
-
         .btn5::before {
             top: -4px;
             left: 10%;
         }
-
         .btn5::after {
             bottom: -4px;
             right: 10%;
         }
-
         .btn5:hover::before {
             left: 80%;
         }
-
         .btn5:hover::after {
             right: 80%;
         }
-
         This is the sixth button * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
-
         .btn6 {
             width: 300px;
             height: 70px;
@@ -211,7 +232,6 @@
             position: absolute;
             transform: translate(260%, -1100%);
         }
-
         .btn6::before,
         .btn6::after {
             content: "";
@@ -222,49 +242,110 @@
             transform: skewX(50deg);
             transition: .4s linear;
         }
-
         .btn6::before {
             top: -4px;
             left: 10%;
         }
-
         .btn6::after {
             bottom: -4px;
             right: 10%;
         }
-
         .btn6:hover::before {
             left: 80%;
         }
-
         .btn6:hover::after {
             right: 80%;
         }
-
         .pseudoBackground {}
+        .animated-text {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, 30%);
+            background: #2980b9;
+            padding: 0 40px;
+            height: 60px;
+            overflow: hidden;
+        }
+        .line {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 40px;
+            line-height: 60px;
+        }
+        .line:first-child {
+            animation: anim 12s infinite;
+        }
+        @keyframes anim {
+            0% {
+                margin-top: 0;
+            }
+            16% {
+                margin-top: -60px;
+            }
+            33% {
+                margin-top: -120px;
+            }
+            50% {
+                margin-top: -180px;
+            }
+            66% {
+                margin-top: -120px;
+            }
+            82% {
+                margin-top: -60px;
+            }
+            100% {
+                margin-top: 0;
+            }
+        }
     </style>
-
+        
     <title>Registration</title>
 </head>
 
-<body>
-    <div class="container-fluid">
-        <div id="home">
-            <a href="/Logout" id="logout">Logout</a>
-            <form action="/projects">
-                <button class="btn2">Projects</button>
-            </form>
-            <form action="/upcoming">
-                <button class="btn4">Upcoming Projects</button>
-            </form>
-            <form action="/about">
-                <button class="btn5">About me</button>
-            </form>
-            <form action="/create-article">
-                <button class="btn6">Add Project</button>
-            </form>
-        </div>
-    </div>
+<body class="bod">
+    <div style="background-image: url('https://www.itl.cat/pngfile/big/80-809973_openmind-provides-training-web-coding.jpg');"
+        id="pic2">
+    
+        {{!-- <form action="/create-article">
+            <button type="submit" id="articles">New Article</button>
+            <d/div action="/create-article">
+                <button type="submit" id="new">Articles</button> --}}
+
+
+        <a href="/Logout" id="logout">Logout</a>
+
+
+        {{!-- <div id="first">
+                    <section>
+                        {{# each data }}
+                        <div>
+                            <a href="{{ this.heading}}">{{ this.heading }}</a>
+                        </div>
+                        <div>{{ this.title }}</div>
+                        <br>
+                        <br>
+                        <br>
+                        {{/each}}
+                    </section> --}}
+        <form action="/resume">
+    </div> 
+    {{!-- <button class="btn">Resume</button> --}}
+    </form>
+    <form action="/search-engine">
+    </div> <button class="btn2">Search-engine</button>
+    </form>
+    </div> 
+    <form action="/weather">
+    </div> <button class="btn4">Weather Api</button>
+    </form>
+    <form action="/website">
+        </div> <button class="btn5">Website</button>
+    </form>
+
+
 </body>
 
 </html>

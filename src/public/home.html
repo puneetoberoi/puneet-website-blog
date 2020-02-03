@@ -10,16 +10,21 @@
     </title>
 
     <style>
+        body {
+            overflow: hidden;
+        }
+
+
 
         #pic {
             left: 275px;
             top: 20px;
-            padding-top: 20px;
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 18%;
         }
+
 
         #text {
             position: relative;
@@ -106,37 +111,39 @@
                 src="https://media.licdn.com/dms/image/C4D03AQFW-ajyvTenPQ/profile-displayphoto-shrink_200_200/0?e=1583971200&v=beta&t=KsqgY65dXnHlYKjmo9kcYNxJwgUbtv1abmyVhy-00s0">
         </a>
 
+        <div id="home">
+            <div id="text">
+                <h3>Personal</h3>
+                <p>Hi. My name is Jaspreet Singh</p>
 
-        <div id="text">
-            <h3>Personal</h3>
-            <p>Hi. My name is Jaspreet Singh</p>
+                <h3>Professional</h3>
+                <p>I am working at Ticketmaster.</p>
+                <p>Check my resume by clicking link below:</p>
 
-            <h3>Professional</h3>
-            <p>I am working at Ticketmaster.</p>
-            <p>Check my resume by following link below:</p>
+                <a href="https://drive.google.com/open?id=1PZTpzNE009qGB9oSUyduj8_xwjdKReff" id="resume">My Resume</a>
+                <br>
+                <br>
+                <p>If you have an account you can login below</p>
 
-            <a href="https://drive.google.com/open?id=1PZTpzNE009qGB9oSUyduj8_xwjdKReff" id="resume">My Resume</a>
-            <br>
-            <br>
-            <p>If you have an account you can login below</p>
+                </h4>
+            </div>
 
-            </h4>
+
+            <div class="form1">
+                <form action="/login" method="POST" class="box">
+
+                    <input type="text" name="username" placeholder="username" />
+                    <input type="password" name="password" placeholder="password" />
+
+                    <input type="submit" id="submit_btn" value="Login" />
+                    <a href="/create-user" class="button">Register/</a>
+                    <a href="/guest" class="button">Guest Login</a>
+
+
+
+                </form>
+            </div>
         </div>
-
-    <div class="form1">
-        <form action="/login" method="POST" class="box">
-
-            <input type="text" name="username" placeholder="username" />
-            <input type="password" name="password" placeholder="password" />
-
-            <input type="submit" id="submit_btn" value="Login" />
-            <a href="/create-user" class="button">Register/</a>
-            <a href="/guest" class="button">Guest Login</a>
-
-
-
-        </form>
-    </div>
     </div>
     <p>
 

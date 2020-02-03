@@ -116,7 +116,7 @@ app.post('/create-article', function(req, res){
             } else if(error){
                 res.status(500).send(error.toString())
             } else{
-                this.originalRes.redirect('/user-dashboard-two');
+                this.originalRes.redirect('/dashboard');
             }
             
             
@@ -228,7 +228,7 @@ app.post('/login', function (req, res) {
                 }
                 console.log(results);
 
-                this.originalRes.render("user-dashboard-two", {data : results });
+                this.originalRes.render("dashboard", {data : results });
                 
             }.bind({ originalReq: req, originalRes: res }));
         
@@ -247,6 +247,17 @@ app.post('/login', function (req, res) {
  app.get('/guest', (req, res)=> {
      res.redirect('/guest-dashboard')
  })
+ app.get('/projects', (req, res)=>{
+     res.render('projects')
+ })
+
+ app.get('/weather', (req, res)=>{
+    res.render('weather')
+})
+
+app.get('/projects', (req, res)=>{
+    res.render('projects')
+})
 
 
 app.get('/check-login', function (req, res) {

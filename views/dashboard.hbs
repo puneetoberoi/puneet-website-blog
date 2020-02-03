@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Document</title>
     <style>
-        html,
-        body {
-            height: 100vh;
-            background-color: grey;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+        .contain {
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 70px;
         }
 
-        #logout {
-            margin-top: 10px;
-            margin-left: 1600px;
-            text-decoration: underline;
-            color: teal;
+        #pic1 {
             position: relative;
-            padding: 20px;
-            display: block;
-            font-size: 20px;
+            width: 32%;
         }
 
-
-            {
-                {
-                 !-- This is the second button --
-            }
+        #first {
+            font-size: large;
+            margin: 0 auto;
         }
+
+        /* #logout {
+            position: relative;
+            bottom: 50px;
+            left: 1000px;
+        } */
+
+        #pic2 {
+            position: relative;
+            width: 15%;
+            left: 100px;
+        }
+
+        #text {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            margin: 0 auto;
+        }
+
+        #pic3 {
+            position: relative;
+            width: 20%;
+            left: 200px;
+        }
+
 
         * {
             margin: 0;
@@ -44,13 +64,14 @@
             height: 70px;
             background: none;
             border: 4px solid;
-            color: blue;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
-            position: absolute;
-            transform: translate(50%, 50%);
+            position: relative;
+            top: 30px;
+        
         }
 
         .btn2::before,
@@ -59,9 +80,9 @@
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
-            transition: .4s linear;
+            transition: .3s linear;
         }
 
         .btn2::before {
@@ -82,11 +103,7 @@
             right: 80%;
         }
 
-            {
-                {
-                 !-- This is the fourth button --
-            }
-        }
+
 
         * {
             margin: 0;
@@ -99,13 +116,13 @@
             height: 70px;
             background: none;
             border: 4px solid;
-            color: #3498db;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
             position: relative;
-            transform: translate(380%, -680%);
+            transform: translate(50%, 50%);
         }
 
         .btn4::before,
@@ -114,7 +131,7 @@
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
             transition: .4s linear;
         }
@@ -137,12 +154,6 @@
             right: 80%;
         }
 
-            {
-                {
-                 !-- This is the fifth button --
-            }
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -154,13 +165,13 @@
             height: 70px;
             background: none;
             border: 4px solid;
-            color: #3498db;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
             position: absolute;
-            transform: translate(260%, -400%);
+            transform: translate(165%, -80%);
         }
 
         .btn5::before,
@@ -169,7 +180,7 @@
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
             transition: .4s linear;
         }
@@ -203,13 +214,14 @@
             height: 70px;
             background: none;
             border: 4px solid;
-            color: #3498db;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
             position: absolute;
-            transform: translate(260%, -1100%);
+            transform: translate(200%, -250%);
+
         }
 
         .btn6::before,
@@ -218,7 +230,7 @@
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
             transition: .4s linear;
         }
@@ -240,31 +252,73 @@
         .btn6:hover::after {
             right: 80%;
         }
-
-        .pseudoBackground {}
     </style>
-
-    <title>Registration</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div id="home">
-            <a href="/Logout" id="logout">Logout</a>
+    <div class="container">
+        <div>
+            <a href="/logout" id="logout">Logout</a>
+            <br>
+        </div>
+        <div id="picture">
+            <img src="https://logodix.com/logo/954841.jpg" id="pic1">
+            <img src="https://pluspng.com/img-png/nodejs-logo-png-node-js-development-296.png" id="pic2">
+            <img src="https://blog.miyozinc.com/wp-content/uploads/2016/02/java-logo.png" id="pic3">
+        </div>
+        <div>
+            <p id="first">
+                <br>
+                Welcome Guest, thank you for reaching out to this page.
+                Here you can learn a bit about my work and my contact information.
+                <br>
+            </p>
+            <br>
+            <p>
+                <ul id="text">
+                    <li>Projects - It will take you to my currently finsihed projects.</li>
+                    <li>Upcoming Projects - This page shows the content of what I am currently working on</li>
+                    <li>About - This page will lead you to my contact information.</li>
+                    <li>Add Project - This page will add a comment from you to my database and I can read your valuable
+                        feedback.</li>
+                </ul>
+            </p>
+            <br>
+        </div>
+        <div>
             <form action="/projects">
                 <button class="btn2">Projects</button>
+                <br>
             </form>
+            <br>
+        </div>
+        <div>
             <form action="/upcoming">
                 <button class="btn4">Upcoming Projects</button>
+                <br>
             </form>
+            <br>
+        </div>
+        <div>
             <form action="/about">
                 <button class="btn5">About me</button>
             </form>
-            <form action="/create-article">
-                <button class="btn6">Add Project</button>
-            </form>
+            <br>
         </div>
+        <form action="/create-article">
+            <button class="btn6">Add Project</button>
+            <br>
+        </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
