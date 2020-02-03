@@ -274,23 +274,24 @@
     </div>
     <div id="picture">
       <img src="https://logodix.com/logo/954841.jpg" id="pic1">
-      <img src="https://pluspng.com/img-png/nodejs-logo-png-node-js-development-296.png" id="pic2">
       <img src="https://blog.miyozinc.com/wp-content/uploads/2016/02/java-logo.png" id="pic3">
     </div>
     <div class="projectCard" style="margin: 1.5em 1em">
-      <p>This project is divided in 4 Api's with front-end made with Nodejs and Back-end made with Java.</p>
-      <p>First Node Api has a User interface for the users to input there url into mysql database.
-        This table has a unique property set.
+      <p>This project can provide the Banking details for new users.</p>
+      <p>
+          Here we use a utility package where we use List as Data structure. This utility reads the csv file provided which has the username, SIN number and initial deposit information.
       </p>
-      <p>Second Java Api grabs the links from the database with unique tables and grabs all the sub links mentioned on that URL.
-        It checks if the URL exists or no and stores into another mysql.
-        This table also has a unqiue property set. </p>
-        <p>Third Java Api takes all the sub links, and stores an algorithm result in mongodb database.
-          This database now includes word against links as a key value pair.
+      <p>We store the information and based on that accounts are created. A new account number is provided and a new pin is created for each user.
+           </p>
+        <p>
+            Every user gets a public Api to deposit, withdraw and show his information. 
         </p>
         <p>
-          Fourth Node Api takes in the user query from the UI and process that query to give results.
-          Here interaction is with the mongodb database which holds key as the word and value as the list of URLs.
+            It makes use of OOPs concept by making Accounts class and use Interface which defines the default interest rate for the type of account.
+            There are two type of accounts - 
+            Checking Account
+            Savings Account
+          
         </p>
 
     </div>

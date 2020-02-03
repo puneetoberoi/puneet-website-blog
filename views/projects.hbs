@@ -1,351 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Document</title>
     <style>
-        html,
-        body {
-            height: 100vh;
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+        .contain {
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 70px;
         }
-        #logout {
-            margin-top: 10px;
-            margin-left: 1600px;
-            text-decoration: underline;
-            color: teal;
-            position: absolute;
-            padding: 20px;
-            display: block;
-            font-size: 20px;
+
+        #pic1 {
+            position: relative;
+            width: 32%;
         }
+
+        #first {
+            font-size: large;
+            margin: 0 auto;
+        }
+
+        /* #logout {
+            position: relative;
+            bottom: 50px;
+            left: 1000px;
+        } */
+
         #pic2 {
-            height: 100%;
-            opacity: 0.5;
+            position: relative;
+            width: 15%;
+            left: 100px;
         }
-            {
-                {
-                 !-- This is the first button --
-            }
+
+        #text {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            margin: 0 auto;
         }
+
+        #pic3 {
+            position: relative;
+            width: 20%;
+            left: 200px;
+        }
+
+
         * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
-        .btn {
-            width: 300px;
-            height: 70px;
-            background: none;
-            border: 4px solid;
-            color: #3498db;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-            font-size: 16px;
-            position: absolute;
-            transform: translate(23%, -1000%);
-        }
-        .btn::before,
-        .btn::after {
-            content: "";
-            position: absolute;
-            width: 14px;
-            height: 4px;
-            background: #353b48;
-            transform: skewX(50deg);
-            transition: .4s linear;
-        }
-        .btn::before {
-            top: -4px;
-            left: 10%;
-        }
-        .btn::after {
-            bottom: -4px;
-            right: 10%;
-        }
-        .btn:hover::before {
-            left: 80%;
-        }
-        .btn:hover::after {
-            right: 80%;
-        }
-            {
-                {
-                 !-- This is the second button --
-            }
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "montserrat", sans-serif;
-        }
+
         .btn2 {
             width: 300px;
             height: 70px;
             background: none;
             border: 4px solid;
-            color: #3498db;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
-            position: absolute;
-            transform: translate(135%, -680%);
+            position: relative;
+            top: 30px;
+
         }
+
         .btn2::before,
         .btn2::after {
             content: "";
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
-            transition: .4s linear;
+            transition: .3s linear;
         }
+
         .btn2::before {
             top: -4px;
             left: 10%;
         }
+
         .btn2::after {
             bottom: -4px;
             right: 10%;
         }
+
         .btn2:hover::before {
             left: 80%;
         }
+
         .btn2:hover::after {
             right: 80%;
         }
-            {
-                {
-                 !-- This is the fourth button --
-            }
-        }
+
+
+
         * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
+
         .btn4 {
             width: 300px;
             height: 70px;
             background: none;
             border: 4px solid;
-            color: #3498db;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
             position: relative;
-            transform: translate(380%, -680%);
+            transform: translate(50%, 50%);
         }
+
         .btn4::before,
         .btn4::after {
             content: "";
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
             transition: .4s linear;
         }
+
         .btn4::before {
             top: -4px;
             left: 10%;
         }
+
         .btn4::after {
             bottom: -4px;
             right: 10%;
         }
+
         .btn4:hover::before {
             left: 80%;
         }
+
         .btn4:hover::after {
             right: 80%;
         }
-            {
-                {
-                 !-- This is the fifth button --
-            }
-        }
+
         * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
+
         .btn5 {
             width: 300px;
             height: 70px;
             background: none;
             border: 4px solid;
-            color: #3498db;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
             position: absolute;
-            transform: translate(260%, -400%);
+            transform: translate(165%, -80%);
         }
+
         .btn5::before,
         .btn5::after {
             content: "";
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
             transition: .4s linear;
         }
+
         .btn5::before {
             top: -4px;
             left: 10%;
         }
+
         .btn5::after {
             bottom: -4px;
             right: 10%;
         }
+
         .btn5:hover::before {
             left: 80%;
         }
+
         .btn5:hover::after {
             right: 80%;
         }
+
         This is the sixth button * {
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
         }
+
         .btn6 {
             width: 300px;
             height: 70px;
             background: none;
             border: 4px solid;
-            color: #3498db;
+            color: black;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
             font-size: 16px;
             position: absolute;
-            transform: translate(260%, -1100%);
+            transform: translate(200%, -250%);
+
         }
+
         .btn6::before,
         .btn6::after {
             content: "";
             position: absolute;
             width: 14px;
             height: 4px;
-            background: #353b48;
+            background: white;
             transform: skewX(50deg);
             transition: .4s linear;
         }
+
         .btn6::before {
             top: -4px;
             left: 10%;
         }
+
         .btn6::after {
             bottom: -4px;
             right: 10%;
         }
+
         .btn6:hover::before {
             left: 80%;
         }
+
         .btn6:hover::after {
             right: 80%;
         }
-        .pseudoBackground {}
-        .animated-text {
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-60%, 30%);
-            background: #2980b9;
-            padding: 0 40px;
-            height: 60px;
-            overflow: hidden;
-        }
-        .line {
-            text-transform: uppercase;
-            text-align: center;
-            font-size: 40px;
-            line-height: 60px;
-        }
-        .line:first-child {
-            animation: anim 12s infinite;
-        }
-        @keyframes anim {
-            0% {
-                margin-top: 0;
-            }
-            16% {
-                margin-top: -60px;
-            }
-            33% {
-                margin-top: -120px;
-            }
-            50% {
-                margin-top: -180px;
-            }
-            66% {
-                margin-top: -120px;
-            }
-            82% {
-                margin-top: -60px;
-            }
-            100% {
-                margin-top: 0;
-            }
-        }
     </style>
-        
-    <title>Registration</title>
 </head>
 
-<body class="bod">
-    <div style="background-image: url('https://www.itl.cat/pngfile/big/80-809973_openmind-provides-training-web-coding.jpg');"
-        id="pic2">
-    
-        {{!-- <form action="/create-article">
-            <button type="submit" id="articles">New Article</button>
-            <d/div action="/create-article">
-                <button type="submit" id="new">Articles</button> --}}
-
-
-        <a href="/Logout" id="logout">Logout</a>
-
-
-        {{!-- <div id="first">
-                    <section>
-                        {{# each data }}
-                        <div>
-                            <a href="{{ this.heading}}">{{ this.heading }}</a>
-                        </div>
-                        <div>{{ this.title }}</div>
-                        <br>
-                        <br>
-                        <br>
-                        {{/each}}
-                    </section> --}}
-        <form action="/resume">
-    </div> 
-    {{!-- <button class="btn">Resume</button> --}}
-    </form>
-    <form action="/search-engine">
-    </div> <button class="btn2">Search-engine</button>
-    </form>
-    </div> 
-    <form action="/weather">
-    </div> <button class="btn4">Weather Api</button>
-    </form>
-    <form action="/website">
-        </div> <button class="btn5">Website</button>
-    </form>
-
-
+<body>
+    <div class="container">
+        <div>
+            <a href="/logout" id="logout">Logout</a>
+            <br>
+        </div>
+        <div id="picture">
+            <img src="https://logodix.com/logo/954841.jpg" id="pic1">
+            <img src="https://pluspng.com/img-png/nodejs-logo-png-node-js-development-296.png" id="pic2">
+            <img src="https://blog.miyozinc.com/wp-content/uploads/2016/02/java-logo.png" id="pic3">
+        </div>
+        <div>
+            <p id="first">
+                <br>
+                This page will take you deeper into the following contents-:
+                <br>
+            </p>
+            <br>
+            <p>
+                <ul id="text">
+                    <li>Search Engine - Built a seach engine with Nodejs and Java.</li>
+                    <li>Website - Complete portfolio made with Node and express.</li>
+                    <li>Weather-Api - Make use of a third party api and built a weather application.</li>
+                    <li>Bank Api - Api built in java which takes client information from a csv file and adds to the List
+                        data structure based on the type of account they have.</li>
+                </ul>
+            </p>
+            <br>
+        </div>
+        <div>
+            <form action="/search-engine">
+                <button class="btn2">Search Engine</button>
+                <br>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form action="/weather">
+                <button class="btn4">Weather Api</button>
+                <br>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form action="/website">
+                <button class="btn5">Nodejs Website</button>
+            </form>
+            <br>
+        </div>
+        <form action="/bank">
+            <button class="btn6">Bank Api</button>
+            <br>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

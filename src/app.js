@@ -55,10 +55,6 @@ app.get('/about', function(req, res){
     res.sendFile(path.join(__dirname, 'public', 'about.html'))
 })
 
-app.get('/search-engine', function(req, res){
-    res.sendFile(path.join(__dirname, 'public', 'search-engine.html'))
-})
-
 
 app.get('/upcoming', function (req, res){
     res.sendFile(path.join(__dirname, 'public', 'upcoming1.html'))
@@ -253,6 +249,14 @@ app.post('/login', function (req, res) {
 
  app.get('/weather', (req, res)=>{
     res.render('weather')
+})
+
+app.get('/website', (req, res)=>{
+    res.render('website')
+})
+
+app.get('/bank', (req, res)=>{
+    res.render('bank')
 })
 
 app.get('/projects', (req, res)=>{
