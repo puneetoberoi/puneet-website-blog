@@ -129,6 +129,37 @@ app.get('/create-article', function(req, res){
     res.render('create-article')
 })
 
+app.post('/comment', function(req, res){
+    var author = req.body.author;
+    var heading = req.body.heading;
+    var content = req.body.content;
+    var title = req.body.title;
+    console.log(req.body)
+    try {
+
+        var sql = "INSERT INTO comment (author, heading, title, content) VALUES ('" + author + "', '" + heading + "', '" + title + "','" + content + "')";
+
+        connection.query(sql, function(error, results, fields) {
+            if (author!=='guest') {
+                res.send('Please enter the correct username')
+            } else if(error){
+                res.status(500).send(error.toString())
+            } else{
+                this.originalRes.redirect('/guest-dashboard');
+            }
+            
+            
+        }.bind({ originalReq: req, originalRes: res }));
+
+       
+
+    } catch (ex) {
+        res.send('Internal error');
+    }
+ })
+
+
+
 
 
 
@@ -239,6 +270,9 @@ app.post('/login', function (req, res) {
  app.get('/guest-dashboard', (req, res)=>{
      res.render('user-dashboard')
  })
+ app.get('/comment', (req, res)=>{
+    res.render('guest-comment')
+})
 
  app.get('/guest', (req, res)=> {
      res.redirect('/guest-dashboard')
